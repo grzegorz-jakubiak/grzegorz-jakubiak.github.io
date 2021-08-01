@@ -12,7 +12,7 @@ tags: about
 
 Welcome y'all! I'm a Backend Developer based in Vienna, Austria. 
 
-I mostly code in Ruby and Elixir. Checkout my [LinkedIn](https://www.linkedin.com/in/grzegorz-jakubiak-668213116) if you want to know more about my professional expeirence.
+I mostly code in Ruby and Elixir. Check my [LinkedIn](https://www.linkedin.com/in/grzegorz-jakubiak-668213116) out if you want to know more about my professional experience.
 
-Apart from coding I do enjoy any kind of sport and physical activity. All in all, I do what everybody does i.e. read books, watch movies and try to stay sane in this crazy world.
+Apart from coding, I do enjoy any kind of sport and physical activity. All in all, I do what everybody does i.e. read books, watch movies and try to stay sane in this crazy world.
 
