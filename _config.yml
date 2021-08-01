@@ -7,7 +7,6 @@ baseurl:     ""
 date_format: "%b %-d, %Y"
 header_pages:
  - about.md
- - contact.html
 
 # Google services
 google_verification:
@@ -22,8 +21,7 @@ bing_verification:
 animated:             false
 show_related_posts:   false
 show_post_footers:    false
-show_social_icons:    false
-ajaxify_contact_form: false
+show_social_icons:    true
 enable_mathjax: false
 extended_fonts: false
 enable_anchorjs: false
@@ -46,7 +44,7 @@ facebook_appid:
 facebook_comments_number: 10
 
 # Social icons
-github_username:
+github_username: grzegorz-jakubiak
 reddit_username:
 bitbucket_username:
 stackoverflow_id:
@@ -54,7 +52,7 @@ twitter_username:
 skype_username:
 steam_nickname:
 google_plus_id:
-linkedin_username:
+linkedin_username: grzegorz-jakubiak-668213116
 angellist_username:
 medium_id:
 bitcoin_url:
@@ -97,16 +95,6 @@ text:
     related_posts:  'Related Posts'
   index:
     coming_soon: 'Coming soon...'
-  contact:
-    email:    'Email Address'
-    content:  'What would you like to say?'
-    subject:  'New submission!'
-    submit:   'Say Hello'
-    ajax:
-      sending:  'sending..'
-      sent:     'Message sent!'
-      error:    'Error!'
-  thanks: 'Thanks for contacting us. We will reply as soon as possible.'
   og_locale: 'en_US'
 
 # Build settings
