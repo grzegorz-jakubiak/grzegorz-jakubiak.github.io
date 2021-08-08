@@ -33,6 +33,11 @@
   border-radius: 50%;
 }
 
+.post .post-meta-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
 .meta,
 .post-meta {
   width: auto;

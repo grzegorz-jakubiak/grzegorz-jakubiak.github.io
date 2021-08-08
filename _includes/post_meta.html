@@ -1,0 +1,18 @@
+<div class="post-meta-wrapper post-meta">
+  <div>
+      <span>{{ page.date | date: site.date_format }}</span><br>
+    {% if page.update_date %}
+      <span>{{ site.text.post.updated | default: "Updated" }}: {{ page.update_date | date: site.date_format }}</span><br>
+    {% endif %}
+    <span class="small">
+    {% if page.minutes %}
+      {{ page.minutes }} {{ site.text.post.minute_read | default: "minute read" }}
+    {% else %}
+      {{ minutes }} {{ site.text.post.minute_read | default: "minute read" }}
+    {% endif %}
+    </span>
+  </div>
+  {% if page.categories %}
+    {% include post_categories.html %}
+  {% endif %}
+</div>

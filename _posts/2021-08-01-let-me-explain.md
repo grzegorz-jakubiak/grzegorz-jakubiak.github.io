@@ -3,6 +3,7 @@ layout: post
 title: Let me explain
 date: 2021-08-01 13:45
 excerpt_separator: <!--more-->
+categories: Personal
 ---
 
 I'd like to start off by explaining what this blog will be about. It's my playground where I will share my thoughts, ideas, stories and code snippets. 
