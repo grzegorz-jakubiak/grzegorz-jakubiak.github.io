@@ -5,11 +5,8 @@
       <span>{{ site.text.post.updated | default: "Updated" }}: {{ page.update_date | date: site.date_format }}</span><br>
     {% endif %}
     <span class="small">
-    {% if page.minutes %}
-      {{ page.minutes }} {{ site.text.post.minute_read | default: "minute read" }}
-    {% else %}
-      {{ minutes }} {{ site.text.post.minute_read | default: "minute read" }}
-    {% endif %}
+      {% include reading_time.html content=page.content %}
+      {{ reading_time }}
     </span>
   </div>
   {% if page.categories %}
