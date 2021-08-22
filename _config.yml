@@ -4,6 +4,7 @@ email:       grzegorz.jakubiak@outlook.com
 author:      Grzegorz Jakubiak
 description: "My online creative space where I share stories, ideas and talk about code."
 baseurl:     ""
+url: "https://grzegorzjakubiak.it"
 date_format: "%b %-d, %Y"
 header_pages:
  - about.md
@@ -87,7 +88,11 @@ plugins:
 exclude:
   - Gemfile
   - Gemfile.lock
+  - gems.rb
+  - gems.locked
+  - .jekyll-cache/
+  - .sass-cache/
+  - node_modules/
   - Rakefile
   - README.md
-  - screenshot.png
   - vendor
