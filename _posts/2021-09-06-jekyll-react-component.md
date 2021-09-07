@@ -14,15 +14,18 @@ I've recently learned that you can finally use JavaScript `import` natively in t
 >
 > -- <cite>Pablo Picasso</cite>
 
-Ever thought of integrating jekyll with React so you can render components directly? ... Yes, sir! 
+Ever thought of integrating jekyll with React so you can render components directly? 
+... 
 
-Then gather round the fire place and I'll spin the tale.
+Yes, sir! 
+
+Then gather round the fireplace, and I'll spin the tale.
 
 # The tale
 
 The support of `import` in the browser means you can use any ES module directly. Using websites like e.g. [ESM](https://esm.sh/) which is a CDN for `npm` packages you are able to add any dependency to your modules.
 
-This is great but with React there is one problem. We are used to `JSX` syntax. However, `JSX` requires transpilation which is not available in the browser.
+This is great, but with React there is one problem. We are used to `JSX` syntax. However, `JSX` requires transpilation which is not available in the browser.
 
 Fortunately, there's an alternative - [HTM(Hyperscript Tagged Markup)](https://github.com/developit/htm). Using **HTM** it is possible to write slightly modified `JSX` syntax.
 
@@ -88,4 +91,4 @@ class Clock extends React.Component {
 {% endreact_component %}
 
 
-A clock component build with ES modules and [AnalogClock](https://github.com/vishnuramana/analogclock) React component.
+A clock component built with ES modules and [AnalogClock](https://github.com/vishnuramana/analogclock) React component.
