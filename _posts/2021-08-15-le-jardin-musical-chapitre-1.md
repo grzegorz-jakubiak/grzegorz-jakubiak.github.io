@@ -15,42 +15,6 @@ Le soleil se levait quand il secoua la tête avec étonnement, surpris de l’ap
 >
 > -- <cite>Wolfgang Amadeus Mozart</cite>
 
-{% react Clock %}
-  class Clock extends React.Component {
-    constructor(props) {
-      super(props);
-      this.state = {date: new Date()};
-    }
-
-    componentDidMount() {
-    this.timerID = setInterval(
-      () => this.tick(),
-      1000
-    );
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.timerID);
-  }
-
-  tick() {
-    this.setState({
-      date: new Date()
-    });
-  }
-
-    render() {
-      return html`
-        <div>
-          <h1>Witaj, świecie!</h1>
-          <h2>Aktualny czas: ${this.state.date.toLocaleTimeString()}.</h2>
-        </div>`;
-    }
-}
-
-export default Clock;
-{% endreact %}
-
 « Je suis au milieu d’un parc » s’exclama t-il, « que m’est-il arrivé ? ». Il essaya de se souvenir de ce qu’il s’était passé.  
 
 « Peut-être est-ce juste un rêve et il faut que je me réveille » pensa t’il en se recouchant de manière rituelle. 

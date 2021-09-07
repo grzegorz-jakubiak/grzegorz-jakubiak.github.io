@@ -7,6 +7,7 @@ group :jekyll_plugins do
   gem 'jekyll-sitemap', '1.4.0'
   gem "jekyll-feed", '~> 0.12'
   gem 'jekyll-paginate', '1.1.0'
+  gem 'jekyll-react-component'
 end
 
 gem "webrick", "~> 1.7"
