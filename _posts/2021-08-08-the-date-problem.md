@@ -6,15 +6,15 @@ excerpt_separator: <!--more-->
 categories: Ruby
 ---
 
-Suppose we want to create an array of dates where a next date is a unit apart from the previous one.
-A start date, a unit, and a number of dates are given.
+Suppose we want to create an array of dates where the next date is one unit away from the previous date.
+We specify a start date, a unit, and a number of dates.
 
-Given following requirements:
+The following requirements are given:
 * Start date - `Date.today`
 * Unit - `1.month` (courtesy of `ActiveSupport`)
 * Number - `3`
 
-Let's see how we can approach this problem in Ruby. (Will use some bits of Rails)
+Let us see how we can tackle this problem in Ruby. (We will use some parts of Rails).
 
 <!--more-->
 
@@ -24,9 +24,9 @@ Let's see how we can approach this problem in Ruby. (Will use some bits of Rails
 
 ## Date Range
 
-Ruby gives us a `Range` object we can use that to try and solve our problem. Since we don't really care about the `end_date` we can make use of an endless range. 
+Ruby provides us with a `Range` object that we can use to solve our problem. Since we do not really care about the `end_date`, we can use an infinite range. 
 
-Let's create a date range:
+Let us create a date range:
 
 ```ruby
 start_date = Date.today
@@ -35,7 +35,7 @@ date_range = (start..)
 => Sun, 08 Aug 2021..
 ```
 
-So what we achieved here is an endless range with a starting point of today which happens to be the 8th of August 2021.
+So we have an infinite range here with a start point of today, August 8, 2021.
 
 Now we can use `Range#first` method to look at the elements:
 
@@ -45,7 +45,7 @@ date_range.first(3)
 => [Sun, 08 Aug 2021, Mon, 09 Aug 2021, Tue, 10 Aug 2021]
 ```
 
-As we can see, we get an array of dates where the next date is one day apart. But how do we change that to 1 month. To do that we can use `Range#step` method like this:
+As we can see, we get an array of dates where the next date is one day apart. But how can we change that to 1 month. For this we can use `Range#step`  method as follows:
 
 ```ruby
 date_range.step(1.month).take(3)
@@ -62,7 +62,7 @@ end
 
 => Sun, 08 Aug 2021..
 ```
-We don't see the text with the date and inspecting `size` tells us it's `nil`:
+We do not see the text with the date, and inspecting `size` tells us it's `nil`:
 
 ```ruby
 date_range.step(1.month).size
@@ -70,9 +70,9 @@ date_range.step(1.month).size
 => nil
 ```
 
-This means ruby doesn't really know how to iterate over this collection. What we could try next is to experiment with a different type of Date/Time object. I found `Time.current` to be perfect for our example. 
+This means that ruby does not really know how to iterate over this collection. Next, we could experiment with a different type of Date/Time object. I found that `Time.current` is perfect for our example. 
 
-The only problem is we have to convert it into `Integer`, otherwise we get:
+The only problem is that we need to convert it to `Integer`, otherwise we get:
 ```ruby
 (Time.current..).step(1.month).take(3)
 
@@ -116,7 +116,7 @@ We ruby developers are used to `Enumerable` module but not so much to its cousin
 
 The solution I really like is using `Enumerator::new` to generate a date enumerator.
 
-Let's see how to implement that:
+Let us see how to implement that:
 
 ```ruby
 date_enumerator = Enumerator.new do |yielder|
@@ -134,6 +134,6 @@ date_enumerator.take(3)
 
 ## Conclusions
 
-* We had a look at three different ways of solving our date problem. 
-* We learned about `Range#step` method and its basic usage. We saw it doesn't provide accurate results with dates.
-* We used `Integer#times` and `Enumerator::new` to solve our problem.
+* We have looked at three different ways to solve our date problem. 
+* We have learned about the `Range#step` method and its basic usage. We have seen that it does not give accurate results for dates.
+* We have used `Integer#times` and `Enumerator::new` to solve our problem.

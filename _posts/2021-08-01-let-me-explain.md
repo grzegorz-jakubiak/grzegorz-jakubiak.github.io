@@ -6,7 +6,7 @@ excerpt_separator: <!--more-->
 categories: Personal
 ---
 
-I'd like to start off by explaining what this blog will be about. It's my playground where I will share my thoughts, ideas, stories and code snippets. 
+To begin, let me explain what this blog will be about. It is my playground where I will share my thoughts, ideas, stories and code snippets.
 
 <!--more-->
 
@@ -14,21 +14,20 @@ I'd like to start off by explaining what this blog will be about. It's my playgr
 >
 > -- <cite>Bodhi</cite>
 
+I do not want it to have any particular structure, nor do I have anything in that direction in mind. 
 
-I don't want it to have a particular structure nor have I anything of that sort in my mind. 
+I think of it as a bit of an experiment. I have actually wanted to start a blog for a while. But I was not sure how to start or if I should do it at all. 
 
-I consider it a little experiment. I've actually wanted to kick off with a blog for a while. Being not sure how to really start or if I even should. 
+My intention is not to just write or talk about programming, code and so on and so forth. I want to have a space where I can just write. The usual trial and error. That's why I want to point this out at the very beginning. 
 
-My intention isn't only to write or talk about programming, code, and so on and so forth. I intend to have space where I can just write. The usual trial and error. So from the very beginning, I'd like to point it out. 
+I may write some of it in English, parts of it in German or French. (As I said, I do not have a plan yet). 
 
-I may write some stuff in English; parts of it in German or French. (I haven't got a plan as I mentioned.) 
+What I do have is the urge to discover something new. For this reason, the blog will not be a regular, strictly IT -related blog. I will write about things that come to my mind or that I observe. 
 
-What I do have is an urge to explore something new. This is why the blog won't be a regular strict IT-related one. I'll write about things that come to my mind or I observe. 
+That may or may not be creative writing. **I do not know**. 
 
-It may be creative writing or not. **I don't know.** 
+You may think it's a bunch of gibberish. **I do not care**. 
 
-You may see it as a bunch of gibberish. **I don't care.** 
-
-It's just something for me that YOU - the internet can see, read, and maybe even enjoy. So without further ado, I would like to warmly welcome you here. 
+It's just something for me to see, read, and maybe even enjoy YOU - the internet. So, without further ado, I welcome you.
 
 Have fun and peace out!! 
