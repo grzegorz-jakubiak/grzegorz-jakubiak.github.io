@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Jekyll React Component – Grzegorz Jakubiak Blog</title>
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="My online creative space where I share stories, ideas and talk about code.">
+    <link rel="manifest" type="application/manifest+json; charset=utf-8" href="/manifest.json">
+    <meta name="robots" content="all">
+    <meta name="author" content="Grzegorz Jakubiak">
+    
+    <meta name="keywords" content="Ruby">
+    <link rel="canonical" href="https://grzegorzjakubiak.it/ruby/2021/09/06/jekyll-react-component/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for Grzegorz Jakubiak Blog" href="/feed.xml">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/pixyll.css?202202060603" type="text/css">
+
+    <script type="text/javascript" src="/assets/javascript/index.js"></script>
+
+    <!-- Fonts -->
+    
+    <link href="//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Lato:900,300" rel="stylesheet" type="text/css">
+    
+    
+      <link href="//maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    
+
+    <!-- MathJax -->
+    
+
+    <!-- Verifications -->
+    
+    
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Jekyll React Component">
+    <meta property="og:description" content="My online creative space where I share stories, ideas and talk about code.">
+    <meta property="og:url" content="https://grzegorzjakubiak.it/ruby/2021/09/06/jekyll-react-component/">
+    <meta property="og:site_name" content="Grzegorz Jakubiak Blog">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    
+    <meta name="twitter:title" content="Jekyll React Component">
+    <meta name="twitter:description" content="My online creative space where I share stories, ideas and talk about code.">
+    <meta name="twitter:url" content="https://grzegorzjakubiak.it/ruby/2021/09/06/jekyll-react-component/">
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="manifest" href="/site.webmanifest">
+
+    
+<script async src="https://unpkg.com/es-module-shims@0.12.8/dist/es-module-shims.js"></script>
+<script type="importmap">
+  {
+    "imports": {
+      "react": "https://esm.sh/react",
+      "react-dom": "https://esm.sh/react-dom",
+      "htm": "https://esm.sh/htm",
+      "assets/": "/assets/"
+    }
+  }
+</script>
+</head>
+
+<body class="site">
+  
+	
+
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="/" class="site-title">Grzegorz Jakubiak Blog</a>
+      <nav class="site-nav">
+        
+
+
+
+    
+    
+    
+    
+        <a class="nav-link" href="/about/">About Me</a>
+    
+
+    
+
+
+      </nav>
+      <div class="clearfix"></div>
+      
+        <div class="social-icons">
+  <div class="social-icons-right">
+    
+      <a class="fa fa-github" href="https://github.com/grzegorz-jakubiak"></a>
+    
+    
+    
+    
+    <a class="fa fa-rss" href="/feed.xml"></a>
+    
+    
+    
+    
+    
+      <a class="fa fa-envelope" href="mailto:grzegorz.jakubiak@outlook.com"></a>
+    
+    
+      <a class="fa fa-linkedin" href="https://www.linkedin.com/in/grzegorz-jakubiak-668213116"></a>
+    
+    
+    
+    
+    
+  </div>
+  <div class="right">
+    
+    
+    
+  </div>
+</div>
+<div class="clearfix"></div>
+
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+<div class="post-header mb2">
+  <h1>Jekyll React Component</h1>
+  <div class="post-meta-wrapper post-meta">
+  <div>
+      <span>Sep 6, 2021</span><br>
+    
+    <span class="small">
+      
+      1 min read
+    </span>
+  </div>
+  
+    <div class="post-categories">
+
+<span>Categories:</span>
+
+	<a href="/categories/#Ruby">Ruby</a>
+	
+
+</div>
+  
+</div>
+</div>
+
+<article class="post-content">
+  <p>I’ve recently learned that you can finally use JavaScript <code class="language-plaintext highlighter-rouge">import</code> natively in the browser. I’ve decided to try it out.</p>
+
+<!--more-->
+
+<blockquote>
+  <p>Every act of creation is first an act of destruction.</p>
+
+  <p>– <cite>Pablo Picasso</cite></p>
+</blockquote>
+
+<p>Ever thought of integrating jekyll with React so you can render components directly? 
+…</p>
+
+<p>Yes, sir!</p>
+
+<p>Then gather round the fireplace, and I’ll spin the tale.</p>
+
+<h1 id="the-tale">The tale</h1>
+
+<p>The support of <code class="language-plaintext highlighter-rouge">import</code> in the browser means you can use any ES module directly. Using websites like e.g. <a href="https://esm.sh/">ESM</a> which is a CDN for <code class="language-plaintext highlighter-rouge">npm</code> packages you are able to add any dependency to your modules.</p>
+
+<p>This is great, but with React there is one problem. We are used to <code class="language-plaintext highlighter-rouge">JSX</code> syntax. However, <code class="language-plaintext highlighter-rouge">JSX</code> requires transpilation which is not available in the browser.</p>
+
+<p>Fortunately, there’s an alternative - <a href="https://github.com/developit/htm">HTM(Hyperscript Tagged Markup)</a>. Using <strong>HTM</strong> it is possible to write slightly modified <code class="language-plaintext highlighter-rouge">JSX</code> syntax.</p>
+
+<p>I put all of these together and built <a href="https://github.com/grzegorz-jakubiak/jekyll-react-component">jekyll-react-component</a>. It adds a <code class="language-plaintext highlighter-rouge">react_component</code> tag to jekyll. You can use that to write React components like so</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% react_component {"name": "ComponentName"} %}
+... javascript code...
+{% endreact_component %}
+</code></pre></div></div>
+
+<p>Et voilà:</p>
+
+<div id="clock"></div>
+<script type="module">
+  import React from 'react';
+  import ReactDOM from 'react-dom';
+  import htm from 'htm';
+  const html = htm.bind(React.createElement);
+  
+import AnalogClock from 'https://esm.sh/analog-clock-react';
+
+
+class Clock extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        clockOptions: {
+          width: "300px",
+          border: true,
+          borderColor: "#2e2e2e",
+          baseColor: "#17a2b8",
+          centerColor: "#459cff",
+          centerBorderColor: "#fff",
+          handColors: {
+            second: "#d81c7a",
+            minute: "#fff",
+            hour: "#fff"
+          }
+        },
+        date: new Date()
+      };
+    }
+
+    componentDidMount() {
+    this.timerID = setInterval(
+      () => this.tick(),
+      1000
+    );
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+
+  tick() {
+    this.setState({
+      date: new Date()
+    });
+  }
+
+    render() {
+      return html`<${AnalogClock} ...${this.state.clockOptions}/>`;
+    }
+}
+
+
+
+  ReactDOM.render(html`<${Clock}  />`, document.getElementById('clock'));
+</script>
+
+<p>A clock component built with ES modules and <a href="https://github.com/vishnuramana/analogclock">AnalogClock</a> React component.</p>
+
+</article>
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      © Grzegorz Jakubiak
+    </small>
+  </div>
+</footer>
+</body>
+</html>

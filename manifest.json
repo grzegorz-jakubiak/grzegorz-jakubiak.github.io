@@ -1,0 +1,22 @@
+{
+  "short_name": "Grzegorz Jakubiak Blog",
+  "name": "Grzegorz Jakubiak Blog",
+  "description": "My online creative space where I share stories, ideas and talk about code.",
+  "icons": [
+    {
+      "src": "/images/splash-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/images/favicon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#ffffff"
+}

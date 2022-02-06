@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>The Date Problem &#8211; Grzegorz Jakubiak Blog</title>
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//maxcdn.bootstrapcdn.com">
+    <link rel="dns-prefetch" href="//cdnjs.cloudflare.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="My online creative space where I share stories, ideas and talk about code.">
+    <link rel="manifest" type="application/manifest+json; charset=utf-8" href="/manifest.json" />
+    <meta name="robots" content="all">
+    <meta name="author" content="Grzegorz Jakubiak">
+    
+    <meta name="keywords" content="Ruby">
+    <link rel="canonical" href="https://grzegorzjakubiak.it/ruby/2021/08/08/the-date-problem/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for Grzegorz Jakubiak Blog" href="/feed.xml" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/assets/css/pixyll.css?202202060603" type="text/css">
+
+    <script type="text/javascript" src="/assets/javascript/index.js"></script>
+
+    <!-- Fonts -->
+    
+    <link href='//fonts.googleapis.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    
+    
+      <link href="//maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+    
+
+    <!-- MathJax -->
+    
+
+    <!-- Verifications -->
+    
+    
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="The Date Problem">
+    <meta property="og:description" content="My online creative space where I share stories, ideas and talk about code.">
+    <meta property="og:url" content="https://grzegorzjakubiak.it/ruby/2021/08/08/the-date-problem/">
+    <meta property="og:site_name" content="Grzegorz Jakubiak Blog">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+    <meta name="twitter:title" content="The Date Problem" />
+    <meta name="twitter:description" content="My online creative space where I share stories, ideas and talk about code." />
+    <meta name="twitter:url" content="https://grzegorzjakubiak.it/ruby/2021/08/08/the-date-problem/" />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/images/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/images/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/images/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/images/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/images/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/images/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/images/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/images/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/images/favicon-32x32.png" sizes="32x32">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="manifest" href="/site.webmanifest">
+
+    
+</head>
+
+<body class="site">
+  
+	
+
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="/" class="site-title">Grzegorz Jakubiak Blog</a>
+      <nav class="site-nav">
+        
+
+
+
+    
+    
+    
+    
+        <a class="nav-link" href="/about/">About Me</a>
+    
+
+    
+
+
+      </nav>
+      <div class="clearfix"></div>
+      
+        <div class="social-icons">
+  <div class="social-icons-right">
+    
+      <a class="fa fa-github" href="https://github.com/grzegorz-jakubiak"></a>
+    
+    
+    
+    
+    <a class="fa fa-rss" href="/feed.xml"></a>
+    
+    
+    
+    
+    
+      <a class="fa fa-envelope" href="mailto:grzegorz.jakubiak@outlook.com"></a>
+    
+    
+      <a class="fa fa-linkedin" href="https://www.linkedin.com/in/grzegorz-jakubiak-668213116"></a>
+    
+    
+    
+    
+    
+  </div>
+  <div class="right">
+    
+    
+    
+  </div>
+</div>
+<div class="clearfix"></div>
+
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+<div class="post-header mb2">
+  <h1>The Date Problem</h1>
+  <div class="post-meta-wrapper post-meta">
+  <div>
+      <span>Aug 8, 2021</span><br>
+    
+    <span class="small">
+      
+      3 min read
+    </span>
+  </div>
+  
+    <div class="post-categories">
+
+<span>Categories:</span>
+
+	<a href="/categories/#Ruby">Ruby</a>
+	
+
+</div>
+  
+</div>
+</div>
+
+<article class="post-content">
+  <p>Suppose we want to create an array of dates where the next date is one unit away from the previous date.
+We specify a start date, a unit, and a number of dates.</p>
+
+<p>The following requirements are given:</p>
+<ul>
+  <li>Start date - <code class="language-plaintext highlighter-rouge">Date.today</code></li>
+  <li>Unit - <code class="language-plaintext highlighter-rouge">1.month</code> (courtesy of <code class="language-plaintext highlighter-rouge">ActiveSupport</code>)</li>
+  <li>Number - <code class="language-plaintext highlighter-rouge">3</code></li>
+</ul>
+
+<p>Let us see how we can tackle this problem in Ruby. (We will use some parts of Rails).</p>
+
+<!--more-->
+
+<blockquote>
+  <p>Time is what we want most, but what we use worst.</p>
+
+  <p>– <cite>William Penn</cite></p>
+</blockquote>
+
+<h2 id="date-range">Date Range</h2>
+
+<p>Ruby provides us with a <code class="language-plaintext highlighter-rouge">Range</code> object that we can use to solve our problem. Since we do not really care about the <code class="language-plaintext highlighter-rouge">end_date</code>, we can use an infinite range.</p>
+
+<p>Let us create a date range:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">start_date</span> <span class="o">=</span> <span class="no">Date</span><span class="p">.</span><span class="nf">today</span>
+<span class="n">date_range</span> <span class="o">=</span> <span class="p">(</span><span class="n">start</span><span class="o">..</span><span class="p">)</span>
+
+<span class="o">=&gt;</span> <span class="no">Sun</span><span class="p">,</span> <span class="mi">08</span> <span class="no">Aug</span> <span class="mi">2021</span><span class="o">..</span>
+</code></pre></div></div>
+
+<p>So we have an infinite range here with a start point of today, August 8, 2021.</p>
+
+<p>Now we can use <code class="language-plaintext highlighter-rouge">Range#first</code> method to look at the elements:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">date_range</span><span class="p">.</span><span class="nf">first</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="o">=&gt;</span> <span class="p">[</span><span class="no">Sun</span><span class="p">,</span> <span class="mi">08</span> <span class="no">Aug</span> <span class="mi">2021</span><span class="p">,</span> <span class="no">Mon</span><span class="p">,</span> <span class="mi">09</span> <span class="no">Aug</span> <span class="mi">2021</span><span class="p">,</span> <span class="no">Tue</span><span class="p">,</span> <span class="mi">10</span> <span class="no">Aug</span> <span class="mi">2021</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>As we can see, we get an array of dates where the next date is one day apart. But how can we change that to 1 month. For this we can use <code class="language-plaintext highlighter-rouge">Range#step</code>  method as follows:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">date_range</span><span class="p">.</span><span class="nf">step</span><span class="p">(</span><span class="mi">1</span><span class="p">.</span><span class="nf">month</span><span class="p">).</span><span class="nf">take</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="o">=&gt;</span> <span class="p">[]</span>
+</code></pre></div></div>
+
+<p>To our surprise, this returns an empty array. If we try to call <code class="language-plaintext highlighter-rouge">each</code>, we’ll see what the problem is:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">date_range</span><span class="p">.</span><span class="nf">step</span><span class="p">(</span><span class="mi">1</span><span class="p">.</span><span class="nf">month</span><span class="p">).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">date</span><span class="o">|</span>
+  <span class="nb">puts</span> <span class="s2">"Print date: </span><span class="si">#{</span><span class="n">date</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+
+<span class="o">=&gt;</span> <span class="no">Sun</span><span class="p">,</span> <span class="mi">08</span> <span class="no">Aug</span> <span class="mi">2021</span><span class="o">..</span>
+</code></pre></div></div>
+<p>We do not see the text with the date, and inspecting <code class="language-plaintext highlighter-rouge">size</code> tells us it’s <code class="language-plaintext highlighter-rouge">nil</code>:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">date_range</span><span class="p">.</span><span class="nf">step</span><span class="p">(</span><span class="mi">1</span><span class="p">.</span><span class="nf">month</span><span class="p">).</span><span class="nf">size</span>
+
+<span class="o">=&gt;</span> <span class="kp">nil</span>
+</code></pre></div></div>
+
+<p>This means that ruby does not really know how to iterate over this collection. Next, we could experiment with a different type of Date/Time object. I found that <code class="language-plaintext highlighter-rouge">Time.current</code> is perfect for our example.</p>
+
+<p>The only problem is that we need to convert it to <code class="language-plaintext highlighter-rouge">Integer</code>, otherwise we get:</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="no">Time</span><span class="p">.</span><span class="nf">current</span><span class="o">..</span><span class="p">).</span><span class="nf">step</span><span class="p">(</span><span class="mi">1</span><span class="p">.</span><span class="nf">month</span><span class="p">).</span><span class="nf">take</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="no">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+        <span class="mi">1</span><span class="p">:</span> <span class="n">from</span> <span class="p">(</span><span class="n">irb</span><span class="p">):</span><span class="mi">51</span>
+<span class="no">TypeError</span> <span class="p">(</span><span class="n">can</span><span class="err">'</span><span class="n">t</span> <span class="n">iterate</span> <span class="n">from</span> <span class="no">ActiveSupport</span><span class="o">::</span><span class="no">TimeWithZone</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>To get the time object back from an <code class="language-plaintext highlighter-rouge">Integer</code> we can use <code class="language-plaintext highlighter-rouge">Time.at</code> method:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="no">Time</span><span class="p">.</span><span class="nf">current</span><span class="p">.</span><span class="nf">to_i</span><span class="o">..</span><span class="p">).</span><span class="nf">step</span><span class="p">(</span><span class="mi">1</span><span class="p">.</span><span class="nf">month</span><span class="p">).</span><span class="nf">take</span><span class="p">(</span><span class="mi">3</span><span class="p">).</span><span class="nf">map</span> <span class="k">do</span> <span class="o">|</span><span class="n">seconds</span><span class="o">|</span>
+  <span class="no">Time</span><span class="p">.</span><span class="nf">at</span><span class="p">(</span><span class="n">seconds</span><span class="p">).</span><span class="nf">to_date</span>
+<span class="k">end</span>
+
+<span class="o">=&gt;</span> <span class="p">[</span><span class="no">Sun</span><span class="p">,</span> <span class="mi">08</span> <span class="no">Aug</span> <span class="mi">2021</span><span class="p">,</span> <span class="no">Tue</span><span class="p">,</span> <span class="mo">07</span> <span class="no">Sep</span> <span class="mi">2021</span><span class="p">,</span> <span class="no">Fri</span><span class="p">,</span> <span class="mi">08</span> <span class="no">Oct</span> <span class="mi">2021</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>This gives us promising results, but the second date is not exactly correct…</p>
+
+<h2 id="integertimes">Integer#times</h2>
+
+<p>As our requirements specify the exact number of dates we could use the <code class="language-plaintext highlighter-rouge">Integer#times</code> method to solve our problem:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">start_date</span> <span class="o">=</span> <span class="no">Date</span><span class="p">.</span><span class="nf">today</span>
+
+<span class="mi">3</span><span class="p">.</span><span class="nf">times</span><span class="p">.</span><span class="nf">map</span> <span class="k">do</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span>
+ <span class="n">start_date</span> <span class="o">+</span> <span class="n">i</span><span class="p">.</span><span class="nf">months</span>
+<span class="k">end</span>
+
+<span class="o">=&gt;</span> <span class="p">[</span><span class="no">Sun</span><span class="p">,</span> <span class="mi">08</span> <span class="no">Aug</span> <span class="mi">2021</span><span class="p">,</span> <span class="no">Wed</span><span class="p">,</span> <span class="mi">08</span> <span class="no">Sep</span> <span class="mi">2021</span><span class="p">,</span> <span class="no">Fri</span><span class="p">,</span> <span class="mi">08</span> <span class="no">Oct</span> <span class="mi">2021</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>This is a very simple and straightforward solution.</p>
+
+<h2 id="enumeratornew">Enumerator::new</h2>
+
+<p>We ruby developers are used to <code class="language-plaintext highlighter-rouge">Enumerable</code> module but not so much to its cousin <code class="language-plaintext highlighter-rouge">Enumerator</code> class.</p>
+
+<p>The solution I really like is using <code class="language-plaintext highlighter-rouge">Enumerator::new</code> to generate a date enumerator.</p>
+
+<p>Let us see how to implement that:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">date_enumerator</span> <span class="o">=</span> <span class="no">Enumerator</span><span class="p">.</span><span class="nf">new</span> <span class="k">do</span> <span class="o">|</span><span class="n">yielder</span><span class="o">|</span>
+  <span class="n">date</span> <span class="o">=</span> <span class="no">Date</span><span class="p">.</span><span class="nf">today</span>
+  <span class="kp">loop</span> <span class="k">do</span>
+   <span class="n">yielder</span> <span class="o">&lt;&lt;</span> <span class="n">date</span>
+   <span class="n">date</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">.</span><span class="nf">month</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+ 
+<span class="n">date_enumerator</span><span class="p">.</span><span class="nf">take</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="o">=&gt;</span> <span class="p">[</span><span class="no">Sun</span><span class="p">,</span> <span class="mi">08</span> <span class="no">Aug</span> <span class="mi">2021</span><span class="p">,</span> <span class="no">Wed</span><span class="p">,</span> <span class="mi">08</span> <span class="no">Sep</span> <span class="mi">2021</span><span class="p">,</span> <span class="no">Fri</span><span class="p">,</span> <span class="mi">08</span> <span class="no">Oct</span> <span class="mi">2021</span><span class="p">]</span>
+</code></pre></div></div>
+
+<h2 id="conclusions">Conclusions</h2>
+
+<ul>
+  <li>We have looked at three different ways to solve our date problem.</li>
+  <li>We have learned about the <code class="language-plaintext highlighter-rouge">Range#step</code> method and its basic usage. We have seen that it does not give accurate results for dates.</li>
+  <li>We have used <code class="language-plaintext highlighter-rouge">Integer#times</code> and <code class="language-plaintext highlighter-rouge">Enumerator::new</code> to solve our problem.</li>
+</ul>
+
+</article>
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      &copy; Grzegorz Jakubiak
+    </small>
+  </div>
+</footer>
+</body>
+</html>

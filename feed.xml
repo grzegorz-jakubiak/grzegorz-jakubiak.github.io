@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Grzegorz Jakubiak Blog</title>
+    <description>My online creative space where I share stories, ideas and talk about code.</description>
+    <link>https://grzegorzjakubiak.it/</link>
+    <atom:link href="https://grzegorzjakubiak.it/feed.xml" rel="self" type="application/rss+xml" />
+    
+      <item>
+        <title>Runno</title>
+        <description>&lt;p&gt;It has been a while, and I have something special for y’all. Through this week’s issue of Ruby Weekly (&lt;a href=&quot;https://rubyweekly.com/issues/589&quot;&gt;#589&lt;/a&gt;) I discovered &lt;a href=&quot;https://runno.dev/&quot;&gt;runno&lt;/a&gt;. It is an in-browser code runner. It uses WebAssembly and supports multiple runtimes. Ruby is one of them, and that’s what got me interested…&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Talk is cheap. Show me the code.&lt;/p&gt;
+
+  &lt;p&gt;– &lt;cite&gt;Linus Torvalds&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Ruby has added official support for &lt;a href=&quot;https://bugs.ruby-lang.org/issues/18462&quot;&gt;WASI based WebAssembly&lt;/a&gt;. This has prompted the maintainer of runno to &lt;a href=&quot;https://dev.to/taybenlor/how-i-got-ruby-snippets-to-run-client-side-in-less-than-a-day-4pbk&quot;&gt;add support for Ruby&lt;/a&gt; to his code runner.&lt;/p&gt;
+
+&lt;p&gt;runno has a web component responsible that you can add to your website, and it does the magic.&lt;/p&gt;
+
+&lt;runno-run runtime=&quot;ruby&quot; editor=&quot;&quot; controls=&quot;&quot;&gt;
+  puts &quot;Hello world!&quot;
+&lt;/runno-run&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;We all know “Hello world”, let’s see what else it can do:&lt;/p&gt;
+
+&lt;runno-run runtime=&quot;ruby&quot; editor=&quot;&quot; controls=&quot;&quot;&gt;
+  numbers = [1, 2, 3, 4]
+  numbers.each { print &quot;#{_1 ** 2} &quot; }
+&lt;/runno-run&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;As we can see we can run any ruby code. Well… not exactly any. There are some limitations mentioned in the &lt;a href=&quot;https://github.com/ruby/ruby/pull/5407&quot;&gt;Ruby pull request&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I found out that runno doesn’t really work in Firefox, and I created an &lt;a href=&quot;https://github.com/taybenlor/runno/issues/183&quot;&gt;issue&lt;/a&gt; on github. I also noticed the web component behaves weird sometimes, and doesn’t show the full terminal with the output.&lt;/p&gt;
+
+&lt;p&gt;All in all, it’s a great tool that I want to run code samples.&lt;/p&gt;
+
+&lt;p&gt;Take care!&lt;/p&gt;
+</description>
+        <pubDate>Sat, 05 Feb 2022 22:51:00 +0000</pubDate>
+        <link>https://grzegorzjakubiak.it/ruby/2022/02/05/runno/</link>
+        <guid isPermaLink="true">https://grzegorzjakubiak.it/ruby/2022/02/05/runno/</guid>
+      </item>
+    
+      <item>
+        <title>Venezia</title>
+        <description>&lt;p&gt;No one knows that I became a big fan of Venezia FC this year. This happened after I visited Venice, Italy for the first time in July this year.
+I was overwhelmed by the beauty of the lagoon city, and I learned that there is a Serie A football club there.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;An orange gem resting on a blue glass plate: it’s Venice seen from above&lt;/p&gt;
+
+  &lt;p&gt;– &lt;cite&gt;Henry James&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I have been following the club since its first game in September. I have been looking at the fixture list and making sure not to miss a game. This was becoming a tedious task, and that’s when an idea came to me.&lt;/p&gt;
+
+&lt;p&gt;“Why do not I write an Elixir app?”&lt;/p&gt;
+
+&lt;h3 id=&quot;the-app&quot;&gt;The APP&lt;/h3&gt;
+
+&lt;p&gt;I thought this would be good practice for my elixir skills. So I fired up my VS code and started typing.&lt;/p&gt;
+
+&lt;p&gt;What came out is a simple elixir app called &lt;a href=&quot;https://github.com/grzegorz-jakubiak/venezia&quot;&gt;Venezia&lt;/a&gt;. With it, you can access the fixture list of your favorite Serie A team. It’s very simple: you need to clone the app and launch it.&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;iex -S mix
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-elixir highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;no&quot;&gt;Venezia&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Schedule&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;venezia&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Et voilà, you get a team schedule in a list of maps.&lt;/p&gt;
+
+&lt;h3 id=&quot;learnings&quot;&gt;Learnings&lt;/h3&gt;
+
+&lt;p&gt;Although it’s a simple app I still managed to learn about &lt;a href=&quot;https://github.com/devinus/poolboy&quot;&gt;poolboy&lt;/a&gt; an erlang library for connection pooling.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 07 Nov 2021 01:46:00 +0000</pubDate>
+        <link>https://grzegorzjakubiak.it/elixir/2021/11/07/venezia/</link>
+        <guid isPermaLink="true">https://grzegorzjakubiak.it/elixir/2021/11/07/venezia/</guid>
+      </item>
+    
+      <item>
+        <title>ElixirConf EU</title>
+        <description>&lt;p&gt;Last week I had the great opportunity to attend ElixirConf EU 2021, organized in Warsaw, Poland.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The elixir of life is a bubbling stream of laughter.&lt;/p&gt;
+
+  &lt;p&gt;– &lt;cite&gt;Richelle E. Goodrich, Slaying Dragons&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It was my second Elixir conference, but the first one I attended in person. It was great to see all the speakers there on stage.
+I would like to share some highlights of my conference experience with you.&lt;/p&gt;
+
+&lt;p&gt;I am still new to the Elixir community. It’s only been a year since I started programming in this language. This made it hard for me to choose the talks.&lt;/p&gt;
+
+&lt;p&gt;Anyway, I have compiled a list of talks that I liked:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Going Multi-Node with ExUnit&lt;/strong&gt; by Devon Estes - Devon talked about how to run ExUnit concurrently. The key takeaways are the Erlang libraries ‘:code’ and ‘:rpc’. If, like me, you did not know about these yet, you should definitely check them out.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Control Node: Continuous Delivery and Orchestration as code for Elixir&lt;/strong&gt; by Vanshdeep Singh - essentially Kubernetes with Elixir.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Love Your Crash Dumps&lt;/strong&gt; by Michał Ślaski - Michał presented a comprehensive set of tools to check the performance of your application.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Keynote: Clarity&lt;/strong&gt; by Saša Jurić - great talk on how to avoid clutter. The examples were in Elixir, but the concepts are language independent.
+I recommend every developer to watch the talk.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Doing weird things with Ecto&lt;/strong&gt; by Nikola Begedin - Nikola gave a nice example of validations and polymorphism in Ecto.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;The Pillars of Metaprogramming in Elixir&lt;/strong&gt; by Adi Iyengar - Adi showed me that metaprogramming in Elixir is not as scary as it looks. It was a good introduction to the subject.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;A Safer Elixir&lt;/strong&gt; by Esteban Ibarra - I found that pattern matching, guards, and structs are really your best friends. They help you create safe and readable code.&lt;/p&gt;
+
+&lt;p&gt;All in all, it was a great event and I am very grateful to have attended.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 16 Sep 2021 22:46:00 +0000</pubDate>
+        <link>https://grzegorzjakubiak.it/elixir/2021/09/16/elixir-conf-eu/</link>
+        <guid isPermaLink="true">https://grzegorzjakubiak.it/elixir/2021/09/16/elixir-conf-eu/</guid>
+      </item>
+    
+      <item>
+        <title>Jekyll React Component</title>
+        <description>&lt;p&gt;I’ve recently learned that you can finally use JavaScript &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;import&lt;/code&gt; natively in the browser. I’ve decided to try it out.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Every act of creation is first an act of destruction.&lt;/p&gt;
+
+  &lt;p&gt;– &lt;cite&gt;Pablo Picasso&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Ever thought of integrating jekyll with React so you can render components directly? 
+…&lt;/p&gt;
+
+&lt;p&gt;Yes, sir!&lt;/p&gt;
+
+&lt;p&gt;Then gather round the fireplace, and I’ll spin the tale.&lt;/p&gt;
+
+&lt;h1 id=&quot;the-tale&quot;&gt;The tale&lt;/h1&gt;
+
+&lt;p&gt;The support of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;import&lt;/code&gt; in the browser means you can use any ES module directly. Using websites like e.g. &lt;a href=&quot;https://esm.sh/&quot;&gt;ESM&lt;/a&gt; which is a CDN for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;npm&lt;/code&gt; packages you are able to add any dependency to your modules.&lt;/p&gt;
+
+&lt;p&gt;This is great, but with React there is one problem. We are used to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;JSX&lt;/code&gt; syntax. However, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;JSX&lt;/code&gt; requires transpilation which is not available in the browser.&lt;/p&gt;
+
+&lt;p&gt;Fortunately, there’s an alternative - &lt;a href=&quot;https://github.com/developit/htm&quot;&gt;HTM(Hyperscript Tagged Markup)&lt;/a&gt;. Using &lt;strong&gt;HTM&lt;/strong&gt; it is possible to write slightly modified &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;JSX&lt;/code&gt; syntax.&lt;/p&gt;
+
+&lt;p&gt;I put all of these together and built &lt;a href=&quot;https://github.com/grzegorz-jakubiak/jekyll-react-component&quot;&gt;jekyll-react-component&lt;/a&gt;. It adds a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;react_component&lt;/code&gt; tag to jekyll. You can use that to write React components like so&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;{% react_component {&quot;name&quot;: &quot;ComponentName&quot;} %}
+... javascript code...
+{% endreact_component %}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Et voilà:&lt;/p&gt;
+
+&lt;div id=&quot;clock&quot;&gt;&lt;/div&gt;
+&lt;script type=&quot;module&quot;&gt;
+  import React from 'react';
+  import ReactDOM from 'react-dom';
+  import htm from 'htm';
+  const html = htm.bind(React.createElement);
+  
+import AnalogClock from 'https://esm.sh/analog-clock-react';
+
+
+class Clock extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        clockOptions: {
+          width: &quot;300px&quot;,
+          border: true,
+          borderColor: &quot;#2e2e2e&quot;,
+          baseColor: &quot;#17a2b8&quot;,
+          centerColor: &quot;#459cff&quot;,
+          centerBorderColor: &quot;#fff&quot;,
+          handColors: {
+            second: &quot;#d81c7a&quot;,
+            minute: &quot;#fff&quot;,
+            hour: &quot;#fff&quot;
+          }
+        },
+        date: new Date()
+      };
+    }
+
+    componentDidMount() {
+    this.timerID = setInterval(
+      () =&gt; this.tick(),
+      1000
+    );
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+
+  tick() {
+    this.setState({
+      date: new Date()
+    });
+  }
+
+    render() {
+      return html`&lt;${AnalogClock} ...${this.state.clockOptions}/&gt;`;
+    }
+}
+
+
+
+  ReactDOM.render(html`&lt;${Clock}  /&gt;`, document.getElementById('clock'));
+&lt;/script&gt;
+
+&lt;p&gt;A clock component built with ES modules and &lt;a href=&quot;https://github.com/vishnuramana/analogclock&quot;&gt;AnalogClock&lt;/a&gt; React component.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 06 Sep 2021 20:46:00 +0000</pubDate>
+        <link>https://grzegorzjakubiak.it/ruby/2021/09/06/jekyll-react-component/</link>
+        <guid isPermaLink="true">https://grzegorzjakubiak.it/ruby/2021/09/06/jekyll-react-component/</guid>
+      </item>
+    
+      <item>
+        <title>Le jardin musical: Chapitre 1</title>
+        <description>&lt;p&gt;Le son doux de la musique le réveilla. Il ouvrit lentement les yeux. 
+Le soleil se levait quand il secoua la tête avec étonnement, surpris de l’apparence des arbres avec leurs feuilles rouges et jaunes.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;The music is not in the notes, but in the silence in between.&lt;/p&gt;
+
+  &lt;p&gt;– &lt;cite&gt;Wolfgang Amadeus Mozart&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;« Je suis au milieu d’un parc » s’exclama t-il, « que m’est-il arrivé ? ». Il essaya de se souvenir de ce qu’il s’était passé.&lt;/p&gt;
+
+&lt;p&gt;« Peut-être est-ce juste un rêve et il faut que je me réveille » pensa t’il en se recouchant de manière rituelle.&lt;/p&gt;
+
+&lt;p&gt;Enfant, il avait l’habitude de dormir jusqu’à ce que sa mère le réveille en lui fredonnant une berceuse.&lt;/p&gt;
+
+&lt;p&gt;Depuis cette époque, quand il aurait un cauchemar, il penserait à sa mère fredonnant, 
+et cela le réveillerait immédiatement.&lt;/p&gt;
+
+&lt;p&gt;Mais cette fois cela ne fonctionna pas.&lt;/p&gt;
+
+&lt;p&gt;Il ne put se concentrer à cause de l’agréable musique qui le réveilla. 
+Il se leva pour chercher la source de la mélodie.&lt;/p&gt;
+
+&lt;p&gt;Abasourdi de ne voir rien ni personne qui pu en être la cause il se senti étrange.&lt;/p&gt;
+
+&lt;p&gt;Le sentiment était léger et après un moment il en fut confus. Ensuite, il se sentit tranquille et un instant plus tard il sourit. 
+Même s’il ne pouvait identifier l’origine du son il se sentait en sécurité, et content.&lt;/p&gt;
+
+&lt;p&gt;Il allait chercher son origine…&lt;/p&gt;
+</description>
+        <pubDate>Sun, 15 Aug 2021 10:29:00 +0000</pubDate>
+        <link>https://grzegorzjakubiak.it/writing/2021/08/15/le-jardin-musical-chapitre-1/</link>
+        <guid isPermaLink="true">https://grzegorzjakubiak.it/writing/2021/08/15/le-jardin-musical-chapitre-1/</guid>
+      </item>
+    
+      <item>
+        <title>The Date Problem</title>
+        <description>&lt;p&gt;Suppose we want to create an array of dates where the next date is one unit away from the previous date.
+We specify a start date, a unit, and a number of dates.&lt;/p&gt;
+
+&lt;p&gt;The following requirements are given:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Start date - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Date.today&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Unit - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1.month&lt;/code&gt; (courtesy of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ActiveSupport&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;Number - &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;3&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Let us see how we can tackle this problem in Ruby. (We will use some parts of Rails).&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Time is what we want most, but what we use worst.&lt;/p&gt;
+
+  &lt;p&gt;– &lt;cite&gt;William Penn&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;date-range&quot;&gt;Date Range&lt;/h2&gt;
+
+&lt;p&gt;Ruby provides us with a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Range&lt;/code&gt; object that we can use to solve our problem. Since we do not really care about the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;end_date&lt;/code&gt;, we can use an infinite range.&lt;/p&gt;
+
+&lt;p&gt;Let us create a date range:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;start_date&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;today&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;date_range&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;start&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Sun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;08&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Aug&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2021&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;So we have an infinite range here with a start point of today, August 8, 2021.&lt;/p&gt;
+
+&lt;p&gt;Now we can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Range#first&lt;/code&gt; method to look at the elements:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;date_range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;first&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Sun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;08&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Aug&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2021&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Mon&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;09&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Aug&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2021&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Tue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Aug&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2021&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;As we can see, we get an array of dates where the next date is one day apart. But how can we change that to 1 month. For this we can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Range#step&lt;/code&gt;  method as follows:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;date_range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;take&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To our surprise, this returns an empty array. If we try to call &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;each&lt;/code&gt;, we’ll see what the problem is:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;date_range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;each&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Print date: &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Sun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;08&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Aug&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2021&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;We do not see the text with the date, and inspecting &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;size&lt;/code&gt; tells us it’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nil&lt;/code&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;date_range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;size&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;kp&quot;&gt;nil&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This means that ruby does not really know how to iterate over this collection. Next, we could experiment with a different type of Date/Time object. I found that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Time.current&lt;/code&gt; is perfect for our example.&lt;/p&gt;
+
+&lt;p&gt;The only problem is that we need to convert it to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Integer&lt;/code&gt;, otherwise we get:&lt;/p&gt;
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;current&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;take&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;no&quot;&gt;Traceback&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;most&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;recent&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;call&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;last&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;
+        &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;irb&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;):&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;51&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;TypeError&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;can&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;t&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;iterate&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ActiveSupport&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;TimeWithZone&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;To get the time object back from an &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Integer&lt;/code&gt; we can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Time.at&lt;/code&gt; method:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;current&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;..&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;month&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;take&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;seconds&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;Time&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;at&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;seconds&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_date&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Sun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;08&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Aug&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2021&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Tue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mo&quot;&gt;07&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Sep&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2021&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Fri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;08&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Oct&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2021&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This gives us promising results, but the second date is not exactly correct…&lt;/p&gt;
+
+&lt;h2 id=&quot;integertimes&quot;&gt;Integer#times&lt;/h2&gt;
+
+&lt;p&gt;As our requirements specify the exact number of dates we could use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Integer#times&lt;/code&gt; method to solve our problem:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;start_date&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;today&lt;/span&gt;
+
+&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;times&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+ &lt;span class=&quot;n&quot;&gt;start_date&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;months&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Sun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;08&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Aug&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2021&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Wed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;08&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Sep&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2021&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Fri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;08&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Oct&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2021&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This is a very simple and straightforward solution.&lt;/p&gt;
+
+&lt;h2 id=&quot;enumeratornew&quot;&gt;Enumerator::new&lt;/h2&gt;
+
+&lt;p&gt;We ruby developers are used to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Enumerable&lt;/code&gt; module but not so much to its cousin &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Enumerator&lt;/code&gt; class.&lt;/p&gt;
+
+&lt;p&gt;The solution I really like is using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Enumerator::new&lt;/code&gt; to generate a date enumerator.&lt;/p&gt;
+
+&lt;p&gt;Let us see how to implement that:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;date_enumerator&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Enumerator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;yielder&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;date&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;today&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;loop&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;yielder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;date&lt;/span&gt;
+   &lt;span class=&quot;n&quot;&gt;date&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;month&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+ 
+&lt;span class=&quot;n&quot;&gt;date_enumerator&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;take&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Sun&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;08&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Aug&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2021&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Wed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;08&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Sep&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2021&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Fri&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;08&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Oct&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2021&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;conclusions&quot;&gt;Conclusions&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;We have looked at three different ways to solve our date problem.&lt;/li&gt;
+  &lt;li&gt;We have learned about the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Range#step&lt;/code&gt; method and its basic usage. We have seen that it does not give accurate results for dates.&lt;/li&gt;
+  &lt;li&gt;We have used &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Integer#times&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Enumerator::new&lt;/code&gt; to solve our problem.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 08 Aug 2021 13:21:00 +0000</pubDate>
+        <link>https://grzegorzjakubiak.it/ruby/2021/08/08/the-date-problem/</link>
+        <guid isPermaLink="true">https://grzegorzjakubiak.it/ruby/2021/08/08/the-date-problem/</guid>
+      </item>
+    
+      <item>
+        <title>Let me explain</title>
+        <description>&lt;p&gt;To begin, let me explain what this blog will be about. It is my playground where I will share my thoughts, ideas, stories and code snippets.&lt;/p&gt;
+
+&lt;!--more--&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Feel what the wave is doing. Then accept its energy. Get in sync. Then charge with it.&lt;/p&gt;
+
+  &lt;p&gt;– &lt;cite&gt;Bodhi&lt;/cite&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I do not want it to have any particular structure, nor do I have anything in that direction in mind.&lt;/p&gt;
+
+&lt;p&gt;I think of it as a bit of an experiment. I have actually wanted to start a blog for a while. But I was not sure how to start or if I should do it at all.&lt;/p&gt;
+
+&lt;p&gt;My intention is not to just write or talk about programming, code and so on and so forth. I want to have a space where I can just write. The usual trial and error. That’s why I want to point this out at the very beginning.&lt;/p&gt;
+
+&lt;p&gt;I may write some of it in English, parts of it in German or French. (As I said, I do not have a plan yet).&lt;/p&gt;
+
+&lt;p&gt;What I do have is the urge to discover something new. For this reason, the blog will not be a regular, strictly IT -related blog. I will write about things that come to my mind or that I observe.&lt;/p&gt;
+
+&lt;p&gt;That may or may not be creative writing. &lt;strong&gt;I do not know&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;You may think it’s a bunch of gibberish. &lt;strong&gt;I do not care&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;It’s just something for me to see, read, and maybe even enjoy YOU - the internet. So, without further ado, I welcome you.&lt;/p&gt;
+
+&lt;p&gt;Have fun and peace out!!&lt;/p&gt;
+</description>
+        <pubDate>Sun, 01 Aug 2021 13:45:00 +0000</pubDate>
+        <link>https://grzegorzjakubiak.it/personal/2021/08/01/let-me-explain/</link>
+        <guid isPermaLink="true">https://grzegorzjakubiak.it/personal/2021/08/01/let-me-explain/</guid>
+      </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title></title>
+    <link>https://grzegorzjakubiak.it</link>
+    <description>
+      My online creative space where I share stories, ideas and talk about code.
+    </description>
+    
+        
+            <item>
+                <title>Runno</title>
+                <link>https://grzegorzjakubiak.it/ruby/2022/02/05/runno/</link>
+                <content:encoded>
+                    <![CDATA[
+                    <p>It has been a while, and I have something special for y’all. Through this week’s issue of Ruby Weekly (<a href="https://rubyweekly.com/issues/589">#589</a>) I discovered <a href="https://runno.dev/">runno</a>. It is an in-browser code runner. It uses WebAssembly and supports multiple runtimes. Ruby is one of them, and that’s what got me interested…</p>
+
+<!--more-->
+
+<blockquote>
+  <p>Talk is cheap. Show me the code.</p>
+
+  <p>– <cite>Linus Torvalds</cite></p>
+</blockquote>
+
+<p>Ruby has added official support for <a href="https://bugs.ruby-lang.org/issues/18462">WASI based WebAssembly</a>. This has prompted the maintainer of runno to <a href="https://dev.to/taybenlor/how-i-got-ruby-snippets-to-run-client-side-in-less-than-a-day-4pbk">add support for Ruby</a> to his code runner.</p>
+
+<p>runno has a web component responsible that you can add to your website, and it does the magic.</p>
+
+<runno-run runtime="ruby" editor="" controls="">
+  puts "Hello world!"
+</runno-run>
+
+<p><br /></p>
+
+<p>We all know “Hello world”, let’s see what else it can do:</p>
+
+<runno-run runtime="ruby" editor="" controls="">
+  numbers = [1, 2, 3, 4]
+  numbers.each { print "#{_1 ** 2} " }
+</runno-run>
+
+<p><br /></p>
+
+<p>As we can see we can run any ruby code. Well… not exactly any. There are some limitations mentioned in the <a href="https://github.com/ruby/ruby/pull/5407">Ruby pull request</a>.</p>
+
+<p>I found out that runno doesn’t really work in Firefox, and I created an <a href="https://github.com/taybenlor/runno/issues/183">issue</a> on github. I also noticed the web component behaves weird sometimes, and doesn’t show the full terminal with the output.</p>
+
+<p>All in all, it’s a great tool that I want to run code samples.</p>
+
+<p>Take care!</p>
+
+                    ]]>
+                </content:encoded>
+                <guid isPermaLink="false">/ruby/2022/02/05/runno/</guid>
+                <description>
+                    
+                </description>
+                <pubDate>Sat, 05 Feb 2022 22:51:00 +0000</pubDate>
+                <author>Grzegorz Jakubiak</author>
+            </item>
+        
+    
+        
+            <item>
+                <title>Venezia</title>
+                <link>https://grzegorzjakubiak.it/elixir/2021/11/07/venezia/</link>
+                <content:encoded>
+                    <![CDATA[
+                    <p>No one knows that I became a big fan of Venezia FC this year. This happened after I visited Venice, Italy for the first time in July this year.
+I was overwhelmed by the beauty of the lagoon city, and I learned that there is a Serie A football club there.</p>
+
+<!--more-->
+
+<blockquote>
+  <p>An orange gem resting on a blue glass plate: it’s Venice seen from above</p>
+
+  <p>– <cite>Henry James</cite></p>
+</blockquote>
+
+<p>I have been following the club since its first game in September. I have been looking at the fixture list and making sure not to miss a game. This was becoming a tedious task, and that’s when an idea came to me.</p>
+
+<p>“Why do not I write an Elixir app?”</p>
+
+<h3 id="the-app">The APP</h3>
+
+<p>I thought this would be good practice for my elixir skills. So I fired up my VS code and started typing.</p>
+
+<p>What came out is a simple elixir app called <a href="https://github.com/grzegorz-jakubiak/venezia">Venezia</a>. With it, you can access the fixture list of your favorite Serie A team. It’s very simple: you need to clone the app and launch it.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>iex -S mix
+</code></pre></div></div>
+
+<div class="language-elixir highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">Venezia</span><span class="o">.</span><span class="no">Schedule</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">"venezia"</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>Et voilà, you get a team schedule in a list of maps.</p>
+
+<h3 id="learnings">Learnings</h3>
+
+<p>Although it’s a simple app I still managed to learn about <a href="https://github.com/devinus/poolboy">poolboy</a> an erlang library for connection pooling.</p>
+
+                    ]]>
+                </content:encoded>
+                <guid isPermaLink="false">/elixir/2021/11/07/venezia/</guid>
+                <description>
+                    
+                </description>
+                <pubDate>Sun, 07 Nov 2021 01:46:00 +0000</pubDate>
+                <author>Grzegorz Jakubiak</author>
+            </item>
+        
+    
+        
+            <item>
+                <title>ElixirConf EU</title>
+                <link>https://grzegorzjakubiak.it/elixir/2021/09/16/elixir-conf-eu/</link>
+                <content:encoded>
+                    <![CDATA[
+                    <p>Last week I had the great opportunity to attend ElixirConf EU 2021, organized in Warsaw, Poland.</p>
+
+<!--more-->
+
+<blockquote>
+  <p>The elixir of life is a bubbling stream of laughter.</p>
+
+  <p>– <cite>Richelle E. Goodrich, Slaying Dragons</cite></p>
+</blockquote>
+
+<p>It was my second Elixir conference, but the first one I attended in person. It was great to see all the speakers there on stage.
+I would like to share some highlights of my conference experience with you.</p>
+
+<p>I am still new to the Elixir community. It’s only been a year since I started programming in this language. This made it hard for me to choose the talks.</p>
+
+<p>Anyway, I have compiled a list of talks that I liked:</p>
+<ul>
+  <li>
+    <p><strong>Going Multi-Node with ExUnit</strong> by Devon Estes - Devon talked about how to run ExUnit concurrently. The key takeaways are the Erlang libraries ‘:code’ and ‘:rpc’. If, like me, you did not know about these yet, you should definitely check them out.</p>
+  </li>
+  <li>
+    <p><strong>Control Node: Continuous Delivery and Orchestration as code for Elixir</strong> by Vanshdeep Singh - essentially Kubernetes with Elixir.</p>
+  </li>
+</ul>
+
+<p><strong>Love Your Crash Dumps</strong> by Michał Ślaski - Michał presented a comprehensive set of tools to check the performance of your application.</p>
+
+<ul>
+  <li><strong>Keynote: Clarity</strong> by Saša Jurić - great talk on how to avoid clutter. The examples were in Elixir, but the concepts are language independent.
+I recommend every developer to watch the talk.</li>
+</ul>
+
+<p><strong>Doing weird things with Ecto</strong> by Nikola Begedin - Nikola gave a nice example of validations and polymorphism in Ecto.</p>
+
+<p><strong>The Pillars of Metaprogramming in Elixir</strong> by Adi Iyengar - Adi showed me that metaprogramming in Elixir is not as scary as it looks. It was a good introduction to the subject.</p>
+
+<p><strong>A Safer Elixir</strong> by Esteban Ibarra - I found that pattern matching, guards, and structs are really your best friends. They help you create safe and readable code.</p>
+
+<p>All in all, it was a great event and I am very grateful to have attended.</p>
+
+                    ]]>
+                </content:encoded>
+                <guid isPermaLink="false">/elixir/2021/09/16/elixir-conf-eu/</guid>
+                <description>
+                    
+                </description>
+                <pubDate>Thu, 16 Sep 2021 22:46:00 +0000</pubDate>
+                <author>Grzegorz Jakubiak</author>
+            </item>
+        
+    
+        
+            <item>
+                <title>Jekyll React Component</title>
+                <link>https://grzegorzjakubiak.it/ruby/2021/09/06/jekyll-react-component/</link>
+                <content:encoded>
+                    <![CDATA[
+                    <p>I’ve recently learned that you can finally use JavaScript <code class="language-plaintext highlighter-rouge">import</code> natively in the browser. I’ve decided to try it out.</p>
+
+<!--more-->
+
+<blockquote>
+  <p>Every act of creation is first an act of destruction.</p>
+
+  <p>– <cite>Pablo Picasso</cite></p>
+</blockquote>
+
+<p>Ever thought of integrating jekyll with React so you can render components directly? 
+…</p>
+
+<p>Yes, sir!</p>
+
+<p>Then gather round the fireplace, and I’ll spin the tale.</p>
+
+<h1 id="the-tale">The tale</h1>
+
+<p>The support of <code class="language-plaintext highlighter-rouge">import</code> in the browser means you can use any ES module directly. Using websites like e.g. <a href="https://esm.sh/">ESM</a> which is a CDN for <code class="language-plaintext highlighter-rouge">npm</code> packages you are able to add any dependency to your modules.</p>
+
+<p>This is great, but with React there is one problem. We are used to <code class="language-plaintext highlighter-rouge">JSX</code> syntax. However, <code class="language-plaintext highlighter-rouge">JSX</code> requires transpilation which is not available in the browser.</p>
+
+<p>Fortunately, there’s an alternative - <a href="https://github.com/developit/htm">HTM(Hyperscript Tagged Markup)</a>. Using <strong>HTM</strong> it is possible to write slightly modified <code class="language-plaintext highlighter-rouge">JSX</code> syntax.</p>
+
+<p>I put all of these together and built <a href="https://github.com/grzegorz-jakubiak/jekyll-react-component">jekyll-react-component</a>. It adds a <code class="language-plaintext highlighter-rouge">react_component</code> tag to jekyll. You can use that to write React components like so</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% react_component {"name": "ComponentName"} %}
+... javascript code...
+{% endreact_component %}
+</code></pre></div></div>
+
+<p>Et voilà:</p>
+
+<div id="clock"></div>
+<script type="module">
+  import React from 'react';
+  import ReactDOM from 'react-dom';
+  import htm from 'htm';
+  const html = htm.bind(React.createElement);
+  
+import AnalogClock from 'https://esm.sh/analog-clock-react';
+
+
+class Clock extends React.Component {
+    constructor(props) {
+      super(props);
+      this.state = {
+        clockOptions: {
+          width: "300px",
+          border: true,
+          borderColor: "#2e2e2e",
+          baseColor: "#17a2b8",
+          centerColor: "#459cff",
+          centerBorderColor: "#fff",
+          handColors: {
+            second: "#d81c7a",
+            minute: "#fff",
+            hour: "#fff"
+          }
+        },
+        date: new Date()
+      };
+    }
+
+    componentDidMount() {
+    this.timerID = setInterval(
+      () => this.tick(),
+      1000
+    );
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+
+  tick() {
+    this.setState({
+      date: new Date()
+    });
+  }
+
+    render() {
+      return html`<${AnalogClock} ...${this.state.clockOptions}/>`;
+    }
+}
+
+
+
+  ReactDOM.render(html`<${Clock}  />`, document.getElementById('clock'));
+</script>
+
+<p>A clock component built with ES modules and <a href="https://github.com/vishnuramana/analogclock">AnalogClock</a> React component.</p>
+
+                    ]]>
+                </content:encoded>
+                <guid isPermaLink="false">/ruby/2021/09/06/jekyll-react-component/</guid>
+                <description>
+                    
+                </description>
+                <pubDate>Mon, 06 Sep 2021 20:46:00 +0000</pubDate>
+                <author>Grzegorz Jakubiak</author>
+            </item>
+        
+    
+        
+            <item>
+                <title>Le jardin musical: Chapitre 1</title>
+                <link>https://grzegorzjakubiak.it/writing/2021/08/15/le-jardin-musical-chapitre-1/</link>
+                <content:encoded>
+                    <![CDATA[
+                    <p>Le son doux de la musique le réveilla. Il ouvrit lentement les yeux. 
+Le soleil se levait quand il secoua la tête avec étonnement, surpris de l’apparence des arbres avec leurs feuilles rouges et jaunes.</p>
+
+<!--more-->
+
+<blockquote>
+  <p>The music is not in the notes, but in the silence in between.</p>
+
+  <p>– <cite>Wolfgang Amadeus Mozart</cite></p>
+</blockquote>
+
+<p>« Je suis au milieu d’un parc » s’exclama t-il, « que m’est-il arrivé ? ». Il essaya de se souvenir de ce qu’il s’était passé.</p>
+
+<p>« Peut-être est-ce juste un rêve et il faut que je me réveille » pensa t’il en se recouchant de manière rituelle.</p>
+
+<p>Enfant, il avait l’habitude de dormir jusqu’à ce que sa mère le réveille en lui fredonnant une berceuse.</p>
+
+<p>Depuis cette époque, quand il aurait un cauchemar, il penserait à sa mère fredonnant, 
+et cela le réveillerait immédiatement.</p>
+
+<p>Mais cette fois cela ne fonctionna pas.</p>
+
+<p>Il ne put se concentrer à cause de l’agréable musique qui le réveilla. 
+Il se leva pour chercher la source de la mélodie.</p>
+
+<p>Abasourdi de ne voir rien ni personne qui pu en être la cause il se senti étrange.</p>
+
+<p>Le sentiment était léger et après un moment il en fut confus. Ensuite, il se sentit tranquille et un instant plus tard il sourit. 
+Même s’il ne pouvait identifier l’origine du son il se sentait en sécurité, et content.</p>
+
+<p>Il allait chercher son origine…</p>
+
+                    ]]>
+                </content:encoded>
+                <guid isPermaLink="false">/writing/2021/08/15/le-jardin-musical-chapitre-1/</guid>
+                <description>
+                    
+                </description>
+                <pubDate>Sun, 15 Aug 2021 10:29:00 +0000</pubDate>
+                <author>Grzegorz Jakubiak</author>
+            </item>
+        
+    
+        
+            <item>
+                <title>The Date Problem</title>
+                <link>https://grzegorzjakubiak.it/ruby/2021/08/08/the-date-problem/</link>
+                <content:encoded>
+                    <![CDATA[
+                    <p>Suppose we want to create an array of dates where the next date is one unit away from the previous date.
+We specify a start date, a unit, and a number of dates.</p>
+
+<p>The following requirements are given:</p>
+<ul>
+  <li>Start date - <code class="language-plaintext highlighter-rouge">Date.today</code></li>
+  <li>Unit - <code class="language-plaintext highlighter-rouge">1.month</code> (courtesy of <code class="language-plaintext highlighter-rouge">ActiveSupport</code>)</li>
+  <li>Number - <code class="language-plaintext highlighter-rouge">3</code></li>
+</ul>
+
+<p>Let us see how we can tackle this problem in Ruby. (We will use some parts of Rails).</p>
+
+<!--more-->
+
+<blockquote>
+  <p>Time is what we want most, but what we use worst.</p>
+
+  <p>– <cite>William Penn</cite></p>
+</blockquote>
+
+<h2 id="date-range">Date Range</h2>
+
+<p>Ruby provides us with a <code class="language-plaintext highlighter-rouge">Range</code> object that we can use to solve our problem. Since we do not really care about the <code class="language-plaintext highlighter-rouge">end_date</code>, we can use an infinite range.</p>
+
+<p>Let us create a date range:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">start_date</span> <span class="o">=</span> <span class="no">Date</span><span class="p">.</span><span class="nf">today</span>
+<span class="n">date_range</span> <span class="o">=</span> <span class="p">(</span><span class="n">start</span><span class="o">..</span><span class="p">)</span>
+
+<span class="o">=&gt;</span> <span class="no">Sun</span><span class="p">,</span> <span class="mi">08</span> <span class="no">Aug</span> <span class="mi">2021</span><span class="o">..</span>
+</code></pre></div></div>
+
+<p>So we have an infinite range here with a start point of today, August 8, 2021.</p>
+
+<p>Now we can use <code class="language-plaintext highlighter-rouge">Range#first</code> method to look at the elements:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">date_range</span><span class="p">.</span><span class="nf">first</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="o">=&gt;</span> <span class="p">[</span><span class="no">Sun</span><span class="p">,</span> <span class="mi">08</span> <span class="no">Aug</span> <span class="mi">2021</span><span class="p">,</span> <span class="no">Mon</span><span class="p">,</span> <span class="mi">09</span> <span class="no">Aug</span> <span class="mi">2021</span><span class="p">,</span> <span class="no">Tue</span><span class="p">,</span> <span class="mi">10</span> <span class="no">Aug</span> <span class="mi">2021</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>As we can see, we get an array of dates where the next date is one day apart. But how can we change that to 1 month. For this we can use <code class="language-plaintext highlighter-rouge">Range#step</code>  method as follows:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">date_range</span><span class="p">.</span><span class="nf">step</span><span class="p">(</span><span class="mi">1</span><span class="p">.</span><span class="nf">month</span><span class="p">).</span><span class="nf">take</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="o">=&gt;</span> <span class="p">[]</span>
+</code></pre></div></div>
+
+<p>To our surprise, this returns an empty array. If we try to call <code class="language-plaintext highlighter-rouge">each</code>, we’ll see what the problem is:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">date_range</span><span class="p">.</span><span class="nf">step</span><span class="p">(</span><span class="mi">1</span><span class="p">.</span><span class="nf">month</span><span class="p">).</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">date</span><span class="o">|</span>
+  <span class="nb">puts</span> <span class="s2">"Print date: </span><span class="si">#{</span><span class="n">date</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+
+<span class="o">=&gt;</span> <span class="no">Sun</span><span class="p">,</span> <span class="mi">08</span> <span class="no">Aug</span> <span class="mi">2021</span><span class="o">..</span>
+</code></pre></div></div>
+<p>We do not see the text with the date, and inspecting <code class="language-plaintext highlighter-rouge">size</code> tells us it’s <code class="language-plaintext highlighter-rouge">nil</code>:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">date_range</span><span class="p">.</span><span class="nf">step</span><span class="p">(</span><span class="mi">1</span><span class="p">.</span><span class="nf">month</span><span class="p">).</span><span class="nf">size</span>
+
+<span class="o">=&gt;</span> <span class="kp">nil</span>
+</code></pre></div></div>
+
+<p>This means that ruby does not really know how to iterate over this collection. Next, we could experiment with a different type of Date/Time object. I found that <code class="language-plaintext highlighter-rouge">Time.current</code> is perfect for our example.</p>
+
+<p>The only problem is that we need to convert it to <code class="language-plaintext highlighter-rouge">Integer</code>, otherwise we get:</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="no">Time</span><span class="p">.</span><span class="nf">current</span><span class="o">..</span><span class="p">).</span><span class="nf">step</span><span class="p">(</span><span class="mi">1</span><span class="p">.</span><span class="nf">month</span><span class="p">).</span><span class="nf">take</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="no">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+        <span class="mi">1</span><span class="p">:</span> <span class="n">from</span> <span class="p">(</span><span class="n">irb</span><span class="p">):</span><span class="mi">51</span>
+<span class="no">TypeError</span> <span class="p">(</span><span class="n">can</span><span class="err">'</span><span class="n">t</span> <span class="n">iterate</span> <span class="n">from</span> <span class="no">ActiveSupport</span><span class="o">::</span><span class="no">TimeWithZone</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>To get the time object back from an <code class="language-plaintext highlighter-rouge">Integer</code> we can use <code class="language-plaintext highlighter-rouge">Time.at</code> method:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">(</span><span class="no">Time</span><span class="p">.</span><span class="nf">current</span><span class="p">.</span><span class="nf">to_i</span><span class="o">..</span><span class="p">).</span><span class="nf">step</span><span class="p">(</span><span class="mi">1</span><span class="p">.</span><span class="nf">month</span><span class="p">).</span><span class="nf">take</span><span class="p">(</span><span class="mi">3</span><span class="p">).</span><span class="nf">map</span> <span class="k">do</span> <span class="o">|</span><span class="n">seconds</span><span class="o">|</span>
+  <span class="no">Time</span><span class="p">.</span><span class="nf">at</span><span class="p">(</span><span class="n">seconds</span><span class="p">).</span><span class="nf">to_date</span>
+<span class="k">end</span>
+
+<span class="o">=&gt;</span> <span class="p">[</span><span class="no">Sun</span><span class="p">,</span> <span class="mi">08</span> <span class="no">Aug</span> <span class="mi">2021</span><span class="p">,</span> <span class="no">Tue</span><span class="p">,</span> <span class="mo">07</span> <span class="no">Sep</span> <span class="mi">2021</span><span class="p">,</span> <span class="no">Fri</span><span class="p">,</span> <span class="mi">08</span> <span class="no">Oct</span> <span class="mi">2021</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>This gives us promising results, but the second date is not exactly correct…</p>
+
+<h2 id="integertimes">Integer#times</h2>
+
+<p>As our requirements specify the exact number of dates we could use the <code class="language-plaintext highlighter-rouge">Integer#times</code> method to solve our problem:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">start_date</span> <span class="o">=</span> <span class="no">Date</span><span class="p">.</span><span class="nf">today</span>
+
+<span class="mi">3</span><span class="p">.</span><span class="nf">times</span><span class="p">.</span><span class="nf">map</span> <span class="k">do</span> <span class="o">|</span><span class="n">i</span><span class="o">|</span>
+ <span class="n">start_date</span> <span class="o">+</span> <span class="n">i</span><span class="p">.</span><span class="nf">months</span>
+<span class="k">end</span>
+
+<span class="o">=&gt;</span> <span class="p">[</span><span class="no">Sun</span><span class="p">,</span> <span class="mi">08</span> <span class="no">Aug</span> <span class="mi">2021</span><span class="p">,</span> <span class="no">Wed</span><span class="p">,</span> <span class="mi">08</span> <span class="no">Sep</span> <span class="mi">2021</span><span class="p">,</span> <span class="no">Fri</span><span class="p">,</span> <span class="mi">08</span> <span class="no">Oct</span> <span class="mi">2021</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>This is a very simple and straightforward solution.</p>
+
+<h2 id="enumeratornew">Enumerator::new</h2>
+
+<p>We ruby developers are used to <code class="language-plaintext highlighter-rouge">Enumerable</code> module but not so much to its cousin <code class="language-plaintext highlighter-rouge">Enumerator</code> class.</p>
+
+<p>The solution I really like is using <code class="language-plaintext highlighter-rouge">Enumerator::new</code> to generate a date enumerator.</p>
+
+<p>Let us see how to implement that:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">date_enumerator</span> <span class="o">=</span> <span class="no">Enumerator</span><span class="p">.</span><span class="nf">new</span> <span class="k">do</span> <span class="o">|</span><span class="n">yielder</span><span class="o">|</span>
+  <span class="n">date</span> <span class="o">=</span> <span class="no">Date</span><span class="p">.</span><span class="nf">today</span>
+  <span class="kp">loop</span> <span class="k">do</span>
+   <span class="n">yielder</span> <span class="o">&lt;&lt;</span> <span class="n">date</span>
+   <span class="n">date</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">.</span><span class="nf">month</span>
+  <span class="k">end</span>
+<span class="k">end</span>
+ 
+<span class="n">date_enumerator</span><span class="p">.</span><span class="nf">take</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="o">=&gt;</span> <span class="p">[</span><span class="no">Sun</span><span class="p">,</span> <span class="mi">08</span> <span class="no">Aug</span> <span class="mi">2021</span><span class="p">,</span> <span class="no">Wed</span><span class="p">,</span> <span class="mi">08</span> <span class="no">Sep</span> <span class="mi">2021</span><span class="p">,</span> <span class="no">Fri</span><span class="p">,</span> <span class="mi">08</span> <span class="no">Oct</span> <span class="mi">2021</span><span class="p">]</span>
+</code></pre></div></div>
+
+<h2 id="conclusions">Conclusions</h2>
+
+<ul>
+  <li>We have looked at three different ways to solve our date problem.</li>
+  <li>We have learned about the <code class="language-plaintext highlighter-rouge">Range#step</code> method and its basic usage. We have seen that it does not give accurate results for dates.</li>
+  <li>We have used <code class="language-plaintext highlighter-rouge">Integer#times</code> and <code class="language-plaintext highlighter-rouge">Enumerator::new</code> to solve our problem.</li>
+</ul>
+
+                    ]]>
+                </content:encoded>
+                <guid isPermaLink="false">/ruby/2021/08/08/the-date-problem/</guid>
+                <description>
+                    
+                </description>
+                <pubDate>Sun, 08 Aug 2021 13:21:00 +0000</pubDate>
+                <author>Grzegorz Jakubiak</author>
+            </item>
+        
+    
+        
+            <item>
+                <title>Let me explain</title>
+                <link>https://grzegorzjakubiak.it/personal/2021/08/01/let-me-explain/</link>
+                <content:encoded>
+                    <![CDATA[
+                    <p>To begin, let me explain what this blog will be about. It is my playground where I will share my thoughts, ideas, stories and code snippets.</p>
+
+<!--more-->
+
+<blockquote>
+  <p>Feel what the wave is doing. Then accept its energy. Get in sync. Then charge with it.</p>
+
+  <p>– <cite>Bodhi</cite></p>
+</blockquote>
+
+<p>I do not want it to have any particular structure, nor do I have anything in that direction in mind.</p>
+
+<p>I think of it as a bit of an experiment. I have actually wanted to start a blog for a while. But I was not sure how to start or if I should do it at all.</p>
+
+<p>My intention is not to just write or talk about programming, code and so on and so forth. I want to have a space where I can just write. The usual trial and error. That’s why I want to point this out at the very beginning.</p>
+
+<p>I may write some of it in English, parts of it in German or French. (As I said, I do not have a plan yet).</p>
+
+<p>What I do have is the urge to discover something new. For this reason, the blog will not be a regular, strictly IT -related blog. I will write about things that come to my mind or that I observe.</p>
+
+<p>That may or may not be creative writing. <strong>I do not know</strong>.</p>
+
+<p>You may think it’s a bunch of gibberish. <strong>I do not care</strong>.</p>
+
+<p>It’s just something for me to see, read, and maybe even enjoy YOU - the internet. So, without further ado, I welcome you.</p>
+
+<p>Have fun and peace out!!</p>
+
+                    ]]>
+                </content:encoded>
+                <guid isPermaLink="false">/personal/2021/08/01/let-me-explain/</guid>
+                <description>
+                    
+                </description>
+                <pubDate>Sun, 01 Aug 2021 13:45:00 +0000</pubDate>
+                <author>Grzegorz Jakubiak</author>
+            </item>
+        
+    
+  </channel>
+</rss>
