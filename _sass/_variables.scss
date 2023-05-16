@@ -33,6 +33,8 @@ $viewport-large: 64em;
 
 // Colors
 $blue: #0076df !default;
+$blue-gray: #627d98 !default;
+$white: white !default;
 $red: #f95020 !default;
 $green: #00cf26 !default;
 $yellow: #efcc00 !default;
@@ -44,6 +46,7 @@ $dark-green: #009f06 !default;
 $light-pink: #ffdddd !default;
 $light-green: #ddffdd !default;
 $dark-gray: #333 !default;
+$darkmode-dark-grey: #121212 !default;
 $mid-gray: #777 !default;
 $light-gray: #ccc !default;
 $lighter-gray: #eee !default;
@@ -52,8 +55,16 @@ $darken-2: rgba(#000,.125) !default;
 $darken-3: rgba(#000,.25) !default;
 $darken-4: rgba(#000,.5) !default;
 
+// Text
+$text-color: $dark-gray;
+
+// Post
+$post-title-color: $dark-gray;
+$post-title-dark-mode-color: $white; 
+
 // Links
 $link-color: $blue;
+$link-dark-mode-color: $blue-gray;
 $link-hover-color: darken($blue, 40%);
 
 // Breakpoints
@@ -115,11 +126,13 @@ $hljs-chunk: $light-gray;
 // Header
 $header-border-top: thin solid #f3f3f3;
 $header-color: $dark-gray;
+$header-dark-mode-color: $blue-gray;
 $header-bg-color: #fafafa;
 $header-font-weight: 300;
 
 // Nav
 $nav-color: $mid-gray;
+$nav-dark-mode-color: $blue-gray;
 $nav-link-color: #444;
 $nav-padding: $space-2;
 $nav-link-padding-x: $space-2;
@@ -133,3 +146,4 @@ $footer-color: #7a7a7a;
 $footer-bg-color: #fafafa;
 $footer-font-weight: 300;
 $footer-font-size: .75rem;
+$footer-bg-dark-mode-color: #222;

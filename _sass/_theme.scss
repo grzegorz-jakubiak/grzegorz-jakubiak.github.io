@@ -1,0 +1,23 @@
+html, html[data-theme="light"] {
+  --header-color: #{$header-color};
+  --nav-color: #{$nav-color};
+  --link-color: #{$link-color};
+  --link-hover-color: #{$link-hover-color};
+  --link-text-shadow: white 1px 0px 0px, white -1px 0px 0px;
+  --background-color: #{$white};
+  --text-color: #{$text-color};
+  --footer-color: #{$footer-bg-color};
+  --post-title-color: #{$post-title-color};
+}
+
+html[data-theme="dark"] {
+  --header-color: #{$header-dark-mode-color};
+  --nav-color: #{$nav-dark-mode-color};
+  --link-color: #{$link-dark-mode-color};
+  --link-hover-color: #616e7c;
+  --link-text-shadow: none;
+  --background-color: #{$darkmode-dark-grey};
+  --text-color: #{$white};
+  --footer-color: #{$footer-bg-dark-mode-color};
+  --post-title-color: #{$post-title-dark-mode-color};
+}

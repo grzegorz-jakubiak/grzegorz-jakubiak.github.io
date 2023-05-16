@@ -4,7 +4,7 @@
 }
 
 .site-header a {
-  color: $header-color;
+  color: var(--header-color);
   font-size: $h3;
   font-weight: $header-font-weight;
   background-image: none;
@@ -19,7 +19,7 @@
 }
 
 .site-header nav a {
-  color: $nav-color;
+  color: var(--nav-color);
 }
 
 .site-header nav a:hover,
