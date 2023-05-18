@@ -22,6 +22,7 @@ bing_verification:
 animated:             false
 show_related_posts:   false
 show_social_icons:    true
+enable_dark_mode: true
 enable_mathjax: false
 extended_fonts: false
 enable_anchorjs: false
