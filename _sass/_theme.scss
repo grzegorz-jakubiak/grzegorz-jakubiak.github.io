@@ -13,6 +13,8 @@ html, html[data-theme="light"] {
   --text-color: #{$text-color};
   --footer-color: #{$footer-bg-color};
   --post-title-color: #{$post-title-color};
+  --quote-border-color: #{$quote-border-color};
+  --quote-background-color: #{$quote-background-color};
 }
 
 html[data-theme="dark"] {
@@ -25,6 +27,8 @@ html[data-theme="dark"] {
   --text-color: #{$white};
   --footer-color: #{$footer-bg-dark-mode-color};
   --post-title-color: #{$post-title-dark-mode-color};
+  --quote-border-color: #{$quote-dark-mode-border-color};
+  --quote-background-color: #{$quote-dark-mode-background-color};
 }
 
 body {
@@ -42,6 +46,8 @@ body {
     --text-color: #{$white};
     --footer-color: #{$footer-bg-dark-mode-color};
     --post-title-color: #{$post-title-dark-mode-color};
+    --quote-border-color: #{$quote-dark-mode-border-color};
+    --quote-background-color: #{$quote-dark-mode-background-color};
   }
 }
 
