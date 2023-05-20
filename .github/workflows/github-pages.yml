@@ -15,5 +15,5 @@ jobs:
           timezone: Europe/Vienna
       - uses: helaili/jekyll-action@2.5.0
         with:
-          token: ${{ secrets.JEKYLL_BUILD }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           target_branch: 'gh-pages'
