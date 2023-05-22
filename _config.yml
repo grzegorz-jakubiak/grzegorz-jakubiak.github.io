@@ -74,12 +74,6 @@ text:
     coming_soon: 'Coming soon...'
   og_locale: 'en_US'
 
-# ployglot
-languages: ['en', 'de', 'fr']
-default_lang: 'en'
-exclude_from_localization: ['javascript', 'images', 'css', 'public']
-parallel_localization: true
-
 # Build settings
 markdown:     kramdown
 redcarpet:
@@ -91,7 +85,6 @@ sass:
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-polyglot
 # https://github.com/jekyll/jekyll/issues/2938
 exclude:
   - Gemfile
