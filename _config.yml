@@ -1,13 +1,30 @@
 # Site settings
-title:       Grzegorz Jakubiak Blog
-email:       grzegorz.jakubiak@outlook.com
-author:      Grzegorz Jakubiak
+title: Grzegorz Jakubiak Blog
+email: grzegorz.jakubiak@outlook.com
+author: Grzegorz Jakubiak
 description: "My online creative space. I use it to share whatever's on my mind."
-baseurl:     ""
+baseurl: ""
 url: "https://grzegorzjakubiak.it"
 date_format: "%b %-d, %Y"
 header_pages:
- - about.md
+  - about.md
+
+defaults:
+  - scope:
+      path: "_posts/de"
+      type: "posts"
+    values:
+      language: de
+  - scope:
+      path: "_posts/en"
+      type: "posts"
+    values:
+      language: en
+  - scope:
+      path: "_posts/fr"
+      type: "posts"
+    values:
+      language: fr
 
 # Google services
 google_verification:
@@ -19,9 +36,9 @@ google_tag_manager:
 bing_verification:
 
 # Optional features
-animated:             false
-show_related_posts:   false
-show_social_icons:    true
+animated: false
+show_related_posts: false
+show_social_icons: true
 enable_dark_mode: true
 enable_mathjax: false
 extended_fonts: false
@@ -64,26 +81,24 @@ vk_id:
 
 text:
   pagination:
-    newer: 'Newer'
-    older: 'Older'
+    newer: "Newer"
+    older: "Older"
   post:
-    updated:        'Updated'
-    minute_read:    'minute read'
-    related_posts:  'Related Posts'
+    updated: "Updated"
+    minute_read: "minute read"
+    related_posts: "Related Posts"
   index:
-    coming_soon: 'Coming soon...'
-  og_locale: 'en_US'
+    coming_soon: "Coming soon..."
+  og_locale: "en_US"
 
 # Build settings
-markdown:     kramdown
+markdown: kramdown
 redcarpet:
-  extensions: ['smart', 'tables', 'with_toc_data']
-permalink:    pretty
-paginate:     4
+  extensions: ["smart", "tables", "with_toc_data"]
+permalink: pretty
 sass:
   style: compressed
 plugins:
-  - jekyll-paginate
   - jekyll-sitemap
 # https://github.com/jekyll/jekyll/issues/2938
 exclude:
