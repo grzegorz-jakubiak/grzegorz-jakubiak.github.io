@@ -9,11 +9,11 @@ categories: Personal
 
 I don't know if anybody ever read this blog before but I decided to restart it! Let's see where this takes me.
 
+<!--more-->
+
 > Feel what the wave is doing. Then accept its energy. Get in sync. Then charge with it.
 >
 > -- <cite>Bodhi</cite>
-
-<!--more-->
 
 I got rid of all the old posts. The reason for that is easy: **this is not a programming and whatnot blog anymore**. I've got enough of that at work.
 
