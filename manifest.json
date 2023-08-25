@@ -1,0 +1,17 @@
+{
+  "short_name": "Grzegorz Jakubiak's Blog",
+  "name": "Grzegorz Jakubiak's Blog",
+  "description": "My online creative space. I use it to share whatever's on my mind.",
+  "icons": [
+    {
+      "src": "/images/splash-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#ffffff"
+}

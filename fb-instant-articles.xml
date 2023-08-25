@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title></title>
+    <link>https://grzegorzjakubiak.it</link>
+    <description>
+      My online creative space. I use it to share whatever's on my mind.
+    </description>
+    
+        
+            <item>
+                <title>Welcome</title>
+                <link>https://grzegorzjakubiak.it/personal/2023/05/21/welcome-en/</link>
+                <content:encoded>
+                    <![CDATA[
+                    <p>I don’t know if anybody ever reads this blog before but I decided to restart it! Let’s see where this takes me.</p>
+
+<!--more-->
+
+<blockquote>
+  <p>Feel what the wave is doing. Then accept its energy. Get in sync. Then charge with it.</p>
+
+  <p>– <cite>Bodhi</cite></p>
+</blockquote>
+
+<p>I got rid of all the old posts. The reason for that is easy: <strong>this is not a programming and whatnot blog anymore</strong>. I’ve got enough of that at work.</p>
+
+<p>I don’t have a plan for it. I just want to write something regularly and in three different languages: English, German and French.</p>
+
+<p>Without furhter ado let’s go!!</p>
+
+                    ]]>
+                </content:encoded>
+                <guid isPermaLink="false">/personal/2023/05/21/welcome-en/</guid>
+                <description>
+                    
+                </description>
+                <pubDate>Sun, 21 May 2023 00:00:00 +0000</pubDate>
+                <author>Grzegorz Jakubiak</author>
+            </item>
+        
+    
+  </channel>
+</rss>
