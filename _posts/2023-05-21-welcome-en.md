@@ -7,7 +7,7 @@ excerpt_separator: <!--more-->
 categories: Personal
 ---
 
-I don't know if anybody ever read this blog before but I decided to restart it! Let's see where this takes me.
+I don't know if anybody ever reads this blog before but I decided to restart it! Let's see where this takes me.
 
 <!--more-->
 
